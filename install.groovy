@@ -1,4 +1,4 @@
-pipelineJob('job-name') {
+pipelineJob('check pipeline DSL') {
   definition {
     cps {
       script('''
@@ -38,4 +38,4 @@ pipelineJob('job-name') {
       sandbox()     
     }
   }
-
+}
