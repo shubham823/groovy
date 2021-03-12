@@ -38,4 +38,4 @@ pipelineJob('job-name') {
       sandbox()     
     }
   }
-}
+
