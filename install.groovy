@@ -6,7 +6,7 @@ pipelineJob('seeded') {
   
   definition {
     cps {
-       options { buildDiscarder(logRotator(numToKeepStr: '1')) }
+       
       script(readFileFromWorkspace('Jenkinsfile'))
       sandbox()     
     }
