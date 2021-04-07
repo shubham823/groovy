@@ -17,7 +17,7 @@ pipelineJob('seeded') {
              branch("*/master")
              remote{
                 url('https://github.com/shubham823/groovy.git')
-                credentails(none)
+                
              }
           }
           
