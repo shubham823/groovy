@@ -1,4 +1,6 @@
 pipelineJob('seeded') {
+   
+  definition {
    logRotator {
         numToKeep(30)
        
@@ -9,11 +11,18 @@ pipelineJob('seeded') {
       stringParam('brancjh')
     }
   
-  definition {
-    cps {
-       
-      script(readFileFromWorkspace('Jenkinsfile'))
-      sandbox()     
+    cpsScm {
+       scm{
+          git{
+             branch("*/master")
+             remote{
+                url('https://github.com/shubham823/groovy.git')
+                credentails(none)
+             }
+          }
+          
+       }
+       scriptPath('Jenkinsfile')     
     }
   }
 }
