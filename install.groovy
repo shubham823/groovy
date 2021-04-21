@@ -18,9 +18,9 @@ pipelineJob('seeded') {
           git{
              branch("*/master")
              remote{
-                url('https://github.com/shubham823/groovy.git'){
+                url('https://github.com/shubham823/groovy.git')
                    
-                }
+                
                 
              }
              
