@@ -1,10 +1,15 @@
 
     pipeline {
         agent any
-           
+           timeout(time: 5, unit: 'MINUTES') {
+   // steps to execute
+        }
             stages {
 
                    stage('Stage clone the repository') {
+                       timeout(time: 5, unit: 'MINUTES') {
+   // steps to execute
+}
                     steps {
                              git 'https://github.com/shubham823/play.git'
                         }
