@@ -5,6 +5,10 @@ pipelineJob('seeded') {
         numToKeep(30)
        
     }
+     
+     wrappers {
+        timeout()
+    }
      concurrentBuild(false)
    parameters {
         stringParam('target_host', '192.168.29.200', 'ip off target_host')
@@ -20,7 +24,7 @@ pipelineJob('seeded') {
                 url('https://github.com/shubham823/groovy.git')
                 
              }
-             timeout(15)
+             
           }
           
        }
