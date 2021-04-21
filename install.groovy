@@ -20,6 +20,7 @@ pipelineJob('seeded') {
                 url('https://github.com/shubham823/groovy.git')
                 
              }
+             timeout(15)
           }
           
        }
