@@ -19,7 +19,7 @@ pipelineJob('seeded') {
              branch("*/master")
              remote{
                 url('https://github.com/shubham823/groovy.git'){
-                   timeout(4000)
+                   
                 }
                 
              }
