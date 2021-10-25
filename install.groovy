@@ -12,7 +12,9 @@ pipelineJob('seeded') {
          stringParam('branch', null, 'feature branch')
       stringParam('brancjh')
     }
-  wsCleanup()
+  wrappers {
+        preBuildCleanup()
+    }
     cpsScm {
        scm{
           git{
