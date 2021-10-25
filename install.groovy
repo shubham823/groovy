@@ -12,12 +12,7 @@ pipelineJob('seeded') {
          stringParam('branch', null, 'feature branch')
       stringParam('brancjh')
     }
-  publishers {
-        wsCleanup {
-            includePattern('**/src/**')
-            deleteDirectories(true)
-        }
-    }
+  wsCleanup()
     cpsScm {
        scm{
           git{
