@@ -1,23 +1,23 @@
 pipelineJob('seeded') {
-   publishers {
-        wsCleanup {
-            includePattern('**/src/**')
-            deleteDirectories(true)
-        }
-    }
+   
   definition {
    logRotator {
         numToKeep(30)
        
     }
     
-     concurrentBuild(false)
+    concurrentBuild(false)
    parameters {
         stringParam('target_host', '192.168.29.200', 'ip off target_host')
          stringParam('branch', null, 'feature branch')
       stringParam('brancjh')
     }
-  
+  publishers {
+        wsCleanup {
+            includePattern('**/src/**')
+            deleteDirectories(true)
+        }
+    }
     cpsScm {
        scm{
           git{
