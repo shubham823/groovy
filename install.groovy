@@ -1,5 +1,10 @@
 pipelineJob('seeded') {
-   
+   publishers {
+        wsCleanup {
+            includePattern('**/src/**')
+            deleteDirectories(true)
+        }
+    }
   definition {
    logRotator {
         numToKeep(30)
